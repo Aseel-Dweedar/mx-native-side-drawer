@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.sidemenu.Sidemenu" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Sidemenu</name>
+    <description>Native Side Drawer</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="isOpen" type="attribute">
+                <caption>Is Open</caption>
+                <description/>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>
+                </attributeTypes>
+            </property>
+            <property key="closeDrawer" type="action">
+                <caption>Close Drawer</caption>
+                <description>Action to change the "Is Open" value to false, will be called when clicking the overlay or swipe the mnue</description>
+            </property>
+            <property key="content" type="widgets" required="true">
+                <caption>Content</caption>
+                <description/>
+            </property>
+            <property key="menuPosition" type="enumeration" defaultValue="left">
+                <caption>Menu Position</caption>
+                <description/>
+                <enumerationValues>
+                    <enumerationValue key="left">Left</enumerationValue>
+                    <enumerationValue key="right">Right</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="drawerPercentage" type="integer" defaultValue="85">
+                <caption>Drawer Percentage</caption>
+                <description>Value between 0 - 100, percentage of the screen the drawer will open</description>
+            </property>
+            <property key="animationTime" type="integer" defaultValue="200">
+                <caption>Animation Time</caption>
+                <description>Drawer Animation Time in ms - default 200ms</description>
+            </property>
+            <property key="DrawerColor" type="string" defaultValue="#edf3f6" required='false' >
+                <caption>Drawer background Color</caption>
+                <description/>
+            </property>
+            <property key="overlayColor" type="string" defaultValue="#00000080" required='false' >
+                <caption>Overlay Color</caption>
+                <description/>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
